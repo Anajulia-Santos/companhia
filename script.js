@@ -1,12 +1,10 @@
 var readline = require('readline-sync');
-var filaA = ('')
-var filaB = ('')
-var i = ('')
+
 
 do {
-    console.log(".________________Passagens Áreas________________.");
+    console.log(".__________Passagens Áreas______________.");
     console.log("|                                               |");
-    console.log("|              1 - COMPRAR PASSAGEM             |");
+    console.log("|        1 - COMPRAR PASSAGEM           |");
     console.log("|              2 - CONSULTAR VOOS               |");
     console.log("|              3 - MAPA DE ASSENTOS             |");
     console.log("|              4 - EMITIR TICKET                |");
@@ -42,27 +40,31 @@ do {
             console.log('________________________________________________________');
             break;
         case 3:
+            var filaA = ('')
+            var filaB = ('')
+            var i = ('')
+            var auxA
+            var auxB
             console.log('.______________Passagens Áreas______________.');
             console.log(' ______Você está em -> Mapa de Assentos_____');
             console.log('__________________________________________');
-           
+
             for (i = 1; i <= 12; i++) {
                 var auxA = ('A' + i)
                 if (assento == auxA) {
                     filaA = filaA + " X ";
                 } else {
-                    filaA = filaA + " " + auxA;
+                    filaA = filaA + auxA + " ";
                 }
-            }
-        
-            for (i = 1; i <= 12; i++) {
-                var auxB = ( 'B' + i)
-                if(assento == auxB){
-                 filaB = filaB + " X ";
-                }else{
+                var auxB = ('B' + i)
+                if (assento == auxB) {
+                    filaB = filaB + " X ";
+                } else {
                     filaB = filaB + " " + auxB;
                 }
-             }
+            }
+
+
             console.log(filaA);
             console.log(filaB);
             console.log('__________________________________________');
